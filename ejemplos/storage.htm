@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Maestr&iacute;a 2014</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>									
+		
+		<link rel="stylesheet" href="jquery/jquery.mobile-1.4.4.min.css"/>       				
+		<script src="jquery/jquery-1.11.1.min.js"></script>
+		<script src="jquery/jquery.mobile-1.4.4.min.js"></script>		
+		<link rel="stylesheet" href="estilos.css" />    
+		
+		<script  type="text/javascript">				
+		$(function(){
+					
+			$('#addValue').click(
+			function()
+			{			 
+             var value=$("#txtValue").val();
+			 if (value)
+				{				
+					$("#txtValue").val('');
+					if(typeof(Storage)!=="undefined")
+					{
+					  var values="";
+					  if (localStorage.values)
+						values = localStorage.values;
+						
+					  values = values + value + ",";
+					  localStorage.values = values;
+					  
+					   $('#valuesList').append('<li><a>' + value + '</a></li>').listview('refresh');				   
+					}
+					else
+					{
+						alert('web storage no soportado');
+					}
+				}
+			})
+				
+				
+			$('#btnDelete').click(
+			function()
+			{
+				localStorage.values="";
+				$('#valuesList').empty();
+				$('#valuesList').listview('refresh');
+			})			
+		});
+		</script>
+
+	</head>
+	<body>
+		<div data-role="page" id="page1">
+			<div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="b" id="add-form">
+			<form id="addForm">
+				<h2>Agregar Valor</h2>
+				<label for="txtValue">Valor</label>
+				<input type="text" name="valor" id="txtValue" value="" data-clear-btn="true" data-mini="true">					
+				<div data-type="horizontal" data-role="controlgroup" > 
+					<a href="#" data-role="button" id="addValue" data-theme="b" >Grabar</a>
+					<a href="#" data-role="button" data-rel="close"  >Cancelar</a>				
+				</div>			           
+			</form>				
+			</div><!-- /panel -->
+		
+            <div data-role="header" data-position="fixed">                
+				<img src="imagenes/logo.gif" alt="logo" class="logo"  width="30" height="30" />
+                     <h1>Maestr&iacute;a 2014</h1>
+					 <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right">  
+						<a href="index.htm" data-role="button" data-ajax="false" data-icon="home">Home</a> 				 					 						
+						<a href="#add-form"  data-role="button" data-icon="plus" >Agregar</a> 				 					 
+					</div>					 
+			</div>					
+			
+			 <div data-role="content">
+				<a href="#" data-role="button" id="btnDelete" data-theme="b" >Borrar Todo</a>
+			 <br/>
+				<ul data-role="listview" id="valuesList" >
+				</ul>
+			</div>
+			
+
+			<div data-role="footer"  >												
+				Tel: <a href="tel:44808900">4480-8900</a> &nbsp;
+				UNLaM:
+				<a href="http://www.unlam.edu.ar">Sitio Completo</a>								
+			</div>				
+		</div> <!--page-->		
+		<script>
+			if (localStorage.values)
+			{
+				var values=localStorage.values;
+				var array = values.split(",");
+								
+				for (var i=0;i<array.length-1;i++)
+				{					
+					$('#valuesList').append('<li><a>' + array[i] + '</a></li>');
+				}
+				$('#valuesList').listview('refresh');
+			}
+		</script>
+	</body>	
+	
+</html>
