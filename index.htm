@@ -18,7 +18,35 @@
 			<div data-role="content">
 				<ul data-role="listview" data-inset="true">
 					<li data-role="list-divider">Menú Principal</li>
-					<li><a href="#profesores">Profesores</a></li>
+					<li><a href="#profesores" data-transition="slide">Profesores</a></li>
+				</ul>
+			</div>
+			<footer data-role="footer" data-position="fixed">
+				Tel: <a href="tel:44808900">4480-8900</a>
+				&nbsp;&nbsp;
+				UNLaM: <a href="http://www.unlam.edu.ar">Sitio Completo</a>
+			</footer>
+		</div>
+
+		<div data-role="page" id="profesores">
+			<div data-role="header">
+				<img class="logo" src="imagenes/logo.gif" alt="logo" width="30" height="30"/>
+				<h1>Maestría 2014</h1>
+				<a href="#home" data-role="button" data-icon="home" class="ui-btn-right" data-transition="flip">
+					Home
+				</a>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview" data-inset="true">
+					<li data-role="list-divider">Profesores</li>
+					<li>
+						<img src="imagenes/rocio.jpg" alt="Rocío" height="80" width="80"/>
+						<h2>Rocío Rodríguez</h2>
+					</li>
+					<li>
+						<img src="imagenes/pablo.jpg" alt="Rocío" height="80" width="80"/>
+						<h2>Pablo Martín Vera</h2>
+					</li>
 				</ul>
 			</div>
 			<footer data-role="footer" data-position="fixed">
