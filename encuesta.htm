@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Maestr&iacute;a 2014</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="jquery/jquery.mobile-1.4.4.min.css"/>
+		<script src="jquery/jquery-1.11.1.min.js"></script>
+		<script src="jquery/jquery.mobile-1.4.4.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="estilos.css"/>
+		<link rel="stylesheet" type="text/css" href="ejemplos/themes/unlam.css"/>
+		<link rel="stylesheet" type="text/css" href="ejemplos/themes/jquery.mobile.icons.min.css"/>
+	</head>
+	<body>
+		<div data-role="page" id="page1">
+            <div data-role="header" data-position="fixed" >
+				<img src="imagenes/logo.gif" alt="logo UAI" class="logo"  width="30" height="30" />
+                     <h1>Maestr&iacute;a 2014</h1>
+					 <a href="index.htm" data-role="button" data-ajax="false" data-icon="home" class="ui-btn-right">Home</a>
+			</div>
+			<form action="encuesta.htm" method ="post">
+			<label for="slider2">Le fue interesante esta materia?</label>
+				<select name="slider2" id="slider2" data-role="slider">
+					<option value="off">No</option>
+					<option selected="selected" value="on">Si</option>
+			</select>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+				<legend>Que temas prefiere:</legend>
+				<input type="checkbox" name="checkbox-6" id="checkbox-6">
+				<label for="checkbox-6">XHTML</label>
+				<input type="checkbox" name="checkbox-7" id="checkbox-7" checked="">
+				<label for="checkbox-7">HTML 5</label>
+				<input type="checkbox" name="checkbox-8" id="checkbox-8">
+				<label for="checkbox-8">Css Media Query</label>
+			</fieldset>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+				<legend>Que dias prefiere cursar:</legend>
+					<input type="radio" name="radio-choice-b" id="radio-choice-c" value="luma" checked="checked">
+					<label for="radio-choice-c">Lu - Mi</label>
+					<input type="radio" name="radio-choice-b" id="radio-choice-d" value="maju">
+					<label for="radio-choice-d">Ma - Ju</label>
+					<input type="radio" name="radio-choice-b" id="radio-choice-e" value="mivi">
+					<label for="radio-choice-e">Mi - Vi</label>
+			</fieldset>
+			<label for="select-choice-1" class="select">Sistema operativo preferido</label>
+			<select name="select-choice-1" id="select-choice-1">
+				<option value="and" selected="selected">Android</option>
+				<option value="bb">Blackberry</option>
+				<option value="ios">IOS</option>
+			</select>
+			<label for="text-basic">Nombre:</label>
+			<input type="text" name="text-basic" id="text-basic" value="" />
+				<label for="textarea">Comentarios:</label>
+				<textarea cols="40" rows="8" name="textarea" id="textarea" ></textarea>
+			<label for="number-pattern">Edad:</label>
+			<input type="number" name="number" pattern="[0-9]*" id="number-pattern" value="">
+			<label for="date">Fecha de Ingreso:</label>
+			<input type="date" name="date" id="date" value="" />
+			<label for="tel">Telefono:</label>
+			<input type="tel" name="tel" id="tel" value="" />
+			<input type="submit" value="Enviar" data-icon="action"  data-iconpos="right" />
+			</form>
+			<div data-role="footer"  >
+				Tel: <a href="tel:44808900">4480-8900</a> &nbsp;
+				UNLaM:
+				<a href="http://www.unlam.edu.ar">Sitio Completo</a>
+			</div>
+		</div> <!--page-->
+	</body>
+</html>

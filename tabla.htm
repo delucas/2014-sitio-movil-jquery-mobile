@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="jquery/jquery.mobile-1.4.4.min.css"/>
+		<script src="jquery/jquery-1.11.1.min.js"></script>
+		<script src="jquery/jquery.mobile-1.4.4.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="estilos.css"/>
+		<link rel="stylesheet" type="text/css" href="ejemplos/themes/unlam.css"/>
+		<link rel="stylesheet" type="text/css" href="ejemplos/themes/jquery.mobile.icons.min.css"/>
+	</head>
+	<body>
+		<div data-role="page" id="home">
+			<div data-role="header">
+				<img class="logo" src="imagenes/logo.gif" alt="logo" width="30" height="30"/>
+				<h1>Tabla</h1>
+				<a href="index.htm" data-role="button" data-icon="home" class="ui-btn-right" data-ajax="false">
+					Home
+				</a>
+			</div>
+
+			<div data-role="content">
+				<table data-role="table" id="tabletoggle" data-mode="columntoggle" class="ui-responsive table-stroke">
+					<thead>
+						<tr>
+							<th data-priority="2">Clase</th>
+							<th>Tema</th>
+							<th data-priority="3">Fecha</th>
+							<th data-priority="1">Unidad</th>
+							<th data-priority="4">Contenido</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Introducción</td>
+							<td>25/04/2014</td>
+							<td>Unidad 1</td>
+							<td>celulares, dispositivos, redes</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Introducción</td>
+							<td>26/04/2014</td>
+							<td>Unidad 2</td>
+							<td>Mobile OK, CSS, MARKUP</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Desarrollo</td>
+							<td>27/04/2014</td>
+							<td>Unidad 3</td>
+							<td>html, css, javascript</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<footer data-role="footer" data-position="fixed">
+				Tel: <a href="tel:44808900">4480-8900</a>
+				&nbsp;&nbsp;
+				UNLaM: <a href="http://www.unlam.edu.ar">Sitio Completo</a>
+			</footer>
+		</div>
+	</body>
+</html>
